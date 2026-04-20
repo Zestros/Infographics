@@ -13,9 +13,9 @@ SELECT
   END AS "income",
   CAST(REPLACE(t."bonusvalue", '+', '') AS DECIMAL(10, 2)) AS "bonusValue_clean"
 FROM "data_20260420043051" AS t
-
+```
 ## 2. Работа Фильтров
-![](https://github.com/Zestros/Infographics/blob/main/1.png)
+![](https://raw.githubusercontent.com/Zestros/Infographics/main/1.png)
 
 
 
