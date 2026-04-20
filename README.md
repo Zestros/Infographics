@@ -15,7 +15,7 @@ SELECT
 FROM "data_20260420043051" AS t
 
 ## 2. Работа Фильтров
-[![](1.png)](https://github.com/{username}/{repository}/raw/{branch}/{path}/1.png)
+https://github.com/Zestros/Infographics/edit/main/1.png
 
 
 
