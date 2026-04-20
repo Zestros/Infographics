@@ -15,7 +15,10 @@ SELECT
 FROM "data_20260420043051" AS t
 ```
 ## 2. Работа Фильтров
-![](https://raw.githubusercontent.com/Zestros/Infographics/main/1.png)
+![Кросс фильтр и фильтр по дате](https://raw.githubusercontent.com/Zestros/Infographics/main/1.png)
 
+![Кросс фильтр и фильтр по дате](https://raw.githubusercontent.com/Zestros/Infographics/main/2.png)
 
+![Кросс фильтр и фильтр по категории](https://raw.githubusercontent.com/Zestros/Infographics/main/4.png)
 
+![Кросс фильтр и фильтр по категории](https://raw.githubusercontent.com/Zestros/Infographics/main/3.png)
