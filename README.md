@@ -15,6 +15,28 @@ SELECT
 FROM "data_20260420043051" AS t
 ```
 ## 2. Работа Фильтров
+
+
+
+
+```
+SELECT 
+    daily_sums.day_date AS "Дата",
+    SUM(daily_sums.day_income) OVER (ORDER BY daily_sums.day_date) AS "Баланс"
+FROM (
+    SELECT 
+        PARSEDATETIME("transactiondate", 'dd.MM.yyyy') AS day_date,
+        SUM(CASE 
+            WHEN "type" = 'Списание' THEN CAST("amount" AS DECIMAL(10, 2)) * -1 
+            ELSE CAST("amount" AS DECIMAL(10, 2)) 
+        END) AS day_income
+    FROM "data_20260420043051"
+    GROUP BY PARSEDATETIME("transactiondate", 'dd.MM.yyyy') -- Явное указание функции группировки
+) AS daily_sums
+ORDER BY 1
+
+```
+## 3. Работа Фильтров
 ### Кросс фильтр и фильтр по дате
 ![Кросс фильтр и фильтр по дате](https://raw.githubusercontent.com/Zestros/Infographics/main/1.png)
 
