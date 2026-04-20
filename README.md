@@ -14,7 +14,7 @@ SELECT
   CAST(REPLACE(t."bonusvalue", '+', '') AS DECIMAL(10, 2)) AS "bonusValue_clean"
 FROM "data_20260420043051" AS t
 ```
-## 2. Работа Фильтров
+## 2. Графики 
 ### Анализ кэшбека по категориям.
 ![](https://raw.githubusercontent.com/Zestros/Infographics/main/5.png)
 
