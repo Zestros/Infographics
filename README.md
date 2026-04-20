@@ -1,4 +1,4 @@
-# Анализ транзакций в Metabase
+##
 
 ## 1. Обработка данных (SQL)
 Этот запрос использовался для очистки данных и создания модели:
@@ -14,6 +14,7 @@ SELECT
   CAST(REPLACE(t."bonusvalue", '+', '') AS DECIMAL(10, 2)) AS "bonusValue_clean"
 FROM "data_20260420043051" AS t
 
-<img width="2202" height="1224" alt="image" src="https://github.com/user-attachments/assets/bab7bdf1-2e16-425a-9226-d7be1feb8382" />
+## 2. Работа Фильтров
+[[1.png]]
 
 
