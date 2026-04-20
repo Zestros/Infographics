@@ -15,10 +15,25 @@ SELECT
 FROM "data_20260420043051" AS t
 ```
 ## 2. Работа Фильтров
+### Анализ кэшбека по категориям.
+![](https://raw.githubusercontent.com/Zestros/Infographics/main/5.png)
 
+### Распределение суммарных трат по категориям (Pie).
+![](https://raw.githubusercontent.com/Zestros/Infographics/main/6.png)
 
+### Распределение суммарных трат по категориям и месяцам (Sankey).
+![](https://raw.githubusercontent.com/Zestros/Infographics/main/7.png)
 
+### Индикатор среднемесячных трат.
+![](https://raw.githubusercontent.com/Zestros/Infographics/main/8.png)
 
+### Суммарный приход/расход по месяцам.
+![](https://raw.githubusercontent.com/Zestros/Infographics/main/9.png)
+
+### Движение средств.
+![](https://raw.githubusercontent.com/Zestros/Infographics/main/10.png)
+
+### Запрос для движения средств (Счет баланса по дням)
 ```
 SELECT 
     daily_sums.day_date AS "Дата",
@@ -31,7 +46,7 @@ FROM (
             ELSE CAST("amount" AS DECIMAL(10, 2)) 
         END) AS day_income
     FROM "data_20260420043051"
-    GROUP BY PARSEDATETIME("transactiondate", 'dd.MM.yyyy') -- Явное указание функции группировки
+    GROUP BY PARSEDATETIME("transactiondate", 'dd.MM.yyyy') 
 ) AS daily_sums
 ORDER BY 1
 
